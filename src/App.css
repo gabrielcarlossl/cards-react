@@ -1,0 +1,19 @@
+
+
+.app > h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;   
+    color: black; 
+    font-size: 3em;
+    padding: 10px;
+    border-radius: 15px;
+    text-align: center;
+    
+}
+
+
+
+.app .Cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
