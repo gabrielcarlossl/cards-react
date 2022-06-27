@@ -1,5 +1,6 @@
 import React from "react";
 
+import Input from "./components/formulario/Input";
 import Primeiro from "./components/basicos/Primeiro";
 import ComParametro from "./components/basicos/ComParametro";
 import Fragmento from "./components/basicos/Fragmento";
@@ -8,6 +9,12 @@ import Card from "./components/layout/Card";
 import Familia from "./components/basicos/Familia";
 import FamiliaMembro from "./components/basicos/FamiliaMembro";
 import ListaAlunos from "./components/repeticao/ListaAlunos";
+import ParOuImpar from "./components/condicional/ParOuImpar";
+import UsuarioInfo from "./components/condicional/UsuarioInfo";
+import DiretaPai from "./components/comunicacao/DiretaPai";
+import IndiretaPai from "./components/comunicacao/IndiretaPai";
+import Contador from "./components/contador/Contador";
+import Mega from "./components/megaSena/Mega";
 
 import './App.css'
 import TabelasProdutos from "./components/repeticao/TabelasProdutos";
@@ -57,9 +64,34 @@ export default function App(props) {
             <ListaAlunos></ListaAlunos>
         </Card>
 
-        <Card titulo='#08 - Repetição Produtos' color='#7DCEA0 '>
+        <Card titulo='#08 - Repetição Produtos' color='#7DCEA0'>
             <TabelasProdutos></TabelasProdutos>
         </Card>
+
+        <Card titulo='#09 - Rendereização Condicional' color='#797D7F'>
+            <ParOuImpar numero={20} ></ParOuImpar>
+            <UsuarioInfo usuario={{nome:'Gabriel'}} ></UsuarioInfo>
+        </Card>
+
+        <Card titulo='#10 - Comunicação Direta' color='#CCCCFF'>
+            <DiretaPai></DiretaPai>
+        </Card>
+
+        <Card titulo='#11 - Comunicação Indireta' color='#633974'>
+            <IndiretaPai></IndiretaPai>
+        </Card>
+
+        <Card titulo='#12 - Componente Controlado (Input) ' color='#76D7C4'>
+            <Input></Input>            
+        </Card>
+
+        <Card titulo='#13 - Contador ' color='#212F3D'>
+            <Contador numeroInicial={10}></Contador>    
+        </Card>
+        <Card titulo='#14 - MegaSena ' color='#5DADE2'>
+           <Mega qtde = {8}></Mega>
+        </Card>
+
       </div>
     </div>
   );

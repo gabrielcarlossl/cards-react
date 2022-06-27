@@ -1,43 +1,39 @@
 import React from "react";
 import produtos from '../../data/produtos.js'
+import '../repeticao/TabelaProdutos.css'
 
 export default function TabelasProdutos(props) {
 
-    const listaProdutos = produtos.map(produto=> {
-        return (
-        
-        <table>
-            
-            <tr>
-                <td>{produto.id}</td> 
-                <td>{produto.nomeProduto}</td>
-                <td>R${produto.preco}</td>
-            </tr>
+    function getLinhas() {
+        return produtos.map((produto,i)=> {
+            return (
+                <tr key={produto.id} className={i % 2 === 0 ? 'par' : 'impar'}>
+                    <td>{produto.id}</td>
+                    <td>{produto.nomeProduto}</td>
+                    <td>R$ {produto.preco.toFixed(2)}</td>
+                </tr>
+            )
+        })
+    }
+   return (
+    <div className="TabelaProdutos">
+        <table border='2'>
 
+            <thead>
+
+                <tr>
+                    <th>Id</th>
+                    <th>Nome</th>
+                    <th>Preço</th>
+                </tr>
+                
+            </thead>
+            <tbody>
+                {getLinhas()}
+            </tbody>
+            
         </table>
-        
-        
-        
-        )
-
-    })
-
-    return (
-        <div>   
-
-<table>
-            <tr>
-                <th>Id</th> 
-                <th>Produto</th>
-                <th>Preço</th>  
-            </tr>
-            
-
-        </table>
-        
-        {listaProdutos}
-            
-        </div>
-    )
+    </div>
+   )
     
 }

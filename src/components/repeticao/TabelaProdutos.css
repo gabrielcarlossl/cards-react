@@ -1,0 +1,15 @@
+.TabelaProdutos table{
+    width: 100%;
+}
+
+.TabelaProdutos thead{
+    background-color: #85929E;
+}
+
+.par{
+    background-color: #A9CCE3;
+}
+
+.impar{
+    background-color: #5499C7;
+}
