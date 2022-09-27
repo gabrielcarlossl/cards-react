@@ -1,3 +1,3 @@
 # Estudo de React e CSS 
 
-Site com algumas funcionalidades simples feito estudando o react e css.
+Site com algumas funcionalidades simples feito estudando o react, css e responsividade.
